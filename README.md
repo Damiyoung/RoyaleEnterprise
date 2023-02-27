@@ -1,0 +1,2 @@
+# coreNS
+ CORE Naming Service
