@@ -1,27 +1,22 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
+import Response from "./components/Response/Response";
 
 const App = () => {
-  // const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
-  // const handleToggleDarkMode = () => {
-  //   setIsDarkModeEnabled((prev) => !prev);
-  // };
   return (
-    <div className=" bg-gray-100">
-      <NavBar />
-      <Body />
+    <Router>
+      <div className=" bg-gray-100">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/responses" element={<Response />} />
+        </Routes>
+      </div>
       <Footer />
-    </div>
+    </Router>
   );
 };
 
 export default App;
-
-{
-  /* <div className={isDarkModeEnabled ? "dark-mode" : ""}>
-  <button onClick={handleToggleDarkMode}>
-    {isDarkModeEnabled ? "Disable" : "Enable"} Dark Mode
-  </button>
-</div>; */
-}

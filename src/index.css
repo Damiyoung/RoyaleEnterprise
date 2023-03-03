@@ -6,3 +6,68 @@
   background-color: #1a202c;
   color: #e2e8f0;
 }
+
+.gradient {
+  background: linear-gradient(
+    to right,
+    rgb(74, 75, 71),
+    #ff0,
+    rgb(5, 5, 5),
+    rgb(197, 199, 105),
+    rgb(14, 14, 19),
+    rgb(243, 227, 10)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: move-gradient 1s ease-in-out infinite;
+}
+
+@keyframes move-gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.gradient1 {
+  background: linear-gradient(
+    to right,
+    #943670,
+    #6b4591,
+    #451e49,
+    #ce56e9,
+    #9e5579,
+    rgb(147 51 234)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: move-gradient 1s ease-in-out infinite;
+}
+
+@keyframes move-gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}

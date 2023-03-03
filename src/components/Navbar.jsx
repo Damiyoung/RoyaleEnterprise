@@ -1,48 +1,32 @@
 import { useState } from "react";
+import styles from "../globalStyle";
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-black shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-              alt="Workflow"
-            />
+            <img src={logo} alt="coreNS" className="w-[30%]" />
           </div>
           <div className="hidden lg:flex lg:items-center lg:justify-end lg:flex-1">
-            <a
-              href="#"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
+            <Link to="/" className={`${styles.lgNavbarlink}`}>
               Home
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
+            </Link>
+            <a href="#" className={`${styles.lgNavbarlink}`}>
               Api Docs
             </a>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
+            <a href="#" className={`${styles.lgNavbarlink}`}>
               Twitter
             </a>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
+            <a href="#" className={`${styles.lgNavbarlink}`}>
               Telegram
             </a>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-            >
+            <a href="#" className={`${styles.lgNavbarlink}`}>
               Discord
             </a>
           </div>
@@ -92,36 +76,25 @@ const Navbar = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="lg:hidden">
-          <a
-            href="#"
+        <div className="lg:hidden text-center">
+          <Link
+            to="/"
             className="block text-gray-600 hover:text-gray-900 px-3 py-2
-             rounded-md text-base font-medium"
+             rounded-md text-base font-medium "
           >
             Home
-          </a>
-          <a
-            href="#"
-            className="block text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium"
-          >
+          </Link>
+          <Link to="/" className={`${styles.smNavbarlink}`}>
+            {" "}
             Api Docs
-          </a>
-          <a
-            href="#"
-            className="block text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium"
-          >
+          </Link>
+          <a href="#" className={`${styles.smNavbarlink}`}>
             Twitter
           </a>
-          <a
-            href="#"
-            className="block text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium"
-          >
+          <a href="#" className={`${styles.smNavbarlink}`}>
             Telegram
           </a>
-          <a
-            href="#"
-            className="block text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-base font-medium"
-          >
+          <a href="#" className={`${styles.smNavbarlink}`}>
             Discord
           </a>
         </div>

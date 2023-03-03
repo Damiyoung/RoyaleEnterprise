@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   FaFacebookF,
   FaTwitter,
@@ -13,7 +12,9 @@ const Footer = () => {
       <div className="bg-gray-900 text-gray-400">
         <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
-            <h2 className="text-2xl font-bold text-white uppercase tracking-wide">
+            <h2
+              className={`gradient ${`text-2xl font-bold text-white uppercase`}`}
+            >
               Core ID
             </h2>
             <p className="mt-3 text-base">
