@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <img src={logo} alt="coreNS" className="w-[30%]" />
+            <img src={logo} alt="coreNS" className="sm:w-[35%] w-[45%]" />
           </div>
           <div className="hidden lg:flex lg:items-center lg:justify-end lg:flex-1">
             <Link to="/" className={`${styles.lgNavbarlink}`}>

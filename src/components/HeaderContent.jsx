@@ -10,16 +10,19 @@ const HeaderContent = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center bg-black shadow-lg rounded-lg overflow-hidden animate-fade-in-up">
           <div className="sm:flex items-center px-6 py-4">
             <img
-              className="h-24 w-24 rounded-full mx-auto sm:mx-0 sm:flex-shrink-0 animate-fade-in-left"
+              className="lg:h-24 lg:w-24 w-[40%] rounded-full mx-auto sm:mx-0 sm:flex-shrink-0 animate-fade-in-left"
               src={core}
               alt="Avatar"
             />
-            <div className="text-center sm:text-left sm:ml-4 sm:my-4 animate-fade-in-right">
-              <h1 className={`gradient font-bold text-white uppercase w-[50%]`}>
+            <div className="text-center sm:text-left sm:ml-4 sm:my-2 animate-fade-in-right">
+              <h1
+                className={`gradient font-bold text-lg text-white uppercase mb-2`}
+              >
                 Core ID
               </h1>
               <p className="text-sm font-semibold text-gray-600">
-                Collectible digital cats
+                Empowering Core DAO communities
+                <br /> with a decentralized ID
               </p>
               <div className="mt-4 flex items-center justify-center animate-fade-in-up">
                 <input
