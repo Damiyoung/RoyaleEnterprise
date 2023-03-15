@@ -1,32 +1,35 @@
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+
 export const data = [
   {
     id: "1",
-    coreid: "65566.core",
-    address: "0x75757.....",
+    Title: "Male Ware",
+    img: <img src={img2} alt="slider1" width={300} height={300} />,
   },
   {
     id: "2",
-    coreid: "65566.core",
-    address: "0x75757.....",
+    Title: "Female Ware",
+    img: <img src={img1} alt="slider1" width={300} height={300} />,
   },
   {
     id: "3",
-    coreid: "65566.core",
-    address: "0x75757.....",
+    Title: "Female Ware",
+    img: <img src={img2} alt="slider1" width={300} height={300} />,
   },
   {
     id: "4",
-    coreid: "65566.core",
-    address: "0x75757.....",
+    Title: "Female Ware",
+    img: <img src={img1} alt="slider1" width={300} height={300} />,
   },
   {
     id: "5",
-    coreid: "65566.core",
-    address: "0x75757.....",
+    Title: "Female Ware",
+    img: <img src={img2} alt="slider1" width={300} height={300} />,
   },
   {
     id: "6",
-    coreid: "65566.core",
-    address: "0x75757.....",
+    Title: "Female Ware",
+    img: <img src={img1} alt="slider1" width={300} height={300} />,
   },
 ];

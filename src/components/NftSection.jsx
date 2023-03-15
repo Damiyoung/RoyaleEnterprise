@@ -9,32 +9,31 @@ const NftSection = (id) => {
       <div className="flex flex-col lg:flex-row justify-center items-stretch py-4 ">
         {/* First section */}
         <div className="bg-white shadow-lg rounded-lg p-4 overflow-hidden animate-fade-in-up w-full lg:w-3/4 lg:mr-4 mb-4 lg:mb-0 flex-shrink-0">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {data.map((card) => (
-              <Link to="/responses">
+              // <Link to="/responses">
+              <div
+                key={card.id}
+                className="bg-black rounded-lg shadow-lg overflow-hidden"
+              >
                 <div
-                  key={card.id}
-                  className="bg-black rounded-lg shadow-lg overflow-hidden"
+                  className="h-40 relative bg-blue-200  text-transparent"
+                  style={{ backgroundClip: "text" }}
                 >
-                  <div
-                    className="h-40 relative bg-[#FFD700] bg-cover text-transparent"
-                    style={{ backgroundClip: "text" }}
-                  >
-                    <span className="absolute top-0 right-0 mt-4 mr-4 text-white text-md font-bold">
-                      {card.coreid}
-                    </span>
-                    <span className="absolute bottom-0 left-0 mb-4 ml-6 text-white font-bold">
-                      COREID
-                    </span>
-                  </div>
-                  <div className="p-6 flex flex-col">
-                    <h2 className="font-bold text-2xl mb-4 text-white">
-                      NFT Title
-                    </h2>
-                    <p className="text-gray-600 mb-4">{card.address}</p>
-                  </div>
+                  <span className="flex items-center justify-center absolute top-0 right-0 mr-3 mt-2  font-extrabold   text-black  text-center text-md ">
+                    {card.Title}
+                  </span>
+                  <span className="absolute bottom-0  text-white mx-auto w-full  mr-3 ">
+                    {card.img}
+                  </span>
                 </div>
-              </Link>
+                <div className="p-6 flex flex-col">
+                  <h2 className="font-bold text-2xl mb-4 text-white text-center">
+                    👔👖👗👘
+                  </h2>
+                </div>
+              </div>
+              // </Link>
             ))}
           </div>
         </div>

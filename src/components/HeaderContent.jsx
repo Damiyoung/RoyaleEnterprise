@@ -1,28 +1,37 @@
-import { useState } from "react";
-import core from "../assets/core.png";
-import Countdown from "react-countdown";
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const settings = {
+  dots: true,
+  lazyLoad: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  initialSlide: 2,
+};
 
 const HeaderContent = () => {
-  const [targetDate] = useState(new Date("2023-03-15T00:00:00").getTime());
   return (
     <div>
-      <div className="bg-black shadow-lg rounded-lg overflow-hidden animate-fade-in-up">
-        <div className="flex flex-col lg:flex-row justify-between items-center bg-black shadow-lg rounded-lg overflow-hidden animate-fade-in-up">
+      <div className="bg-blue-200 shadow-lg rounded-lg overflow-hidden animate-fade-in-up">
+        <div className="flex flex-col lg:flex-row justify-between items-center mt-2 ml-2 bg-white h-[60vh] shadow-lg rounded-lg overflow-hidden animate-fade-in-up">
           <div className="sm:flex items-center px-6 py-4">
-            <img
-              className="lg:h-24 lg:w-24 w-[40%] rounded-full mx-auto sm:mx-0 sm:flex-shrink-0 animate-fade-in-left"
-              src={core}
-              alt="Avatar"
-            />
+            <div className=" flex justify-center items-center mb-2 text-6xl   mx-auto animate-fade-in-left">
+              👘
+            </div>
             <div className="text-center sm:text-left sm:ml-4 sm:my-2 animate-fade-in-right">
               <h1
-                className={`gradient font-bold text-lg text-white uppercase mb-2`}
+                className={`gradient font-bold text-3xl text-white uppercase mb-2`}
               >
-                Core ID
+                ROYALE ENTERPRISE
               </h1>
-              <p className="text-sm font-semibold text-gray-600">
-                Empowering Core DAO communities
-                <br /> with a decentralized ID
+              <p className=" font-mono">
+                <p className=" font-bold text-4xl"> New</p>
+                <br /> <p className=" text-3xl">Collections</p>
               </p>
               <div className="mt-4 flex items-center justify-center animate-fade-in-up">
                 <input
@@ -48,35 +57,19 @@ const HeaderContent = () => {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="p-4">
-            <h2 className=" mx-auto lg:text-lg font-bold mb-2">
-              Auction Ends In:
-            </h2>
-            <Countdown
-              date={targetDate}
-              daysInHours
-              renderer={({ days, hours, minutes, seconds }) => (
-                <div className="flex justify-center items-center">
-                  <div className=" lg:text-3xl font-semibold  text-purple-500 mr-2">
-                    {days}
+            <div className=" ">
+              <Slider {...settings}>
+                <div className=" w-20 bg-black ">
+                  <div className=" ">
+                    <img src={img1} alt="slider1" />
                   </div>
-                  <div className="text-gray-200 mr-2 font-serif">days</div>
-                  <div className="lg:text-3xl font-semibold text-purple-500 mr-2">
-                    {hours}
+
+                  <div className=" ">
+                    <img src={img1} alt="slider1" />
                   </div>
-                  <div className="text-gray-200 mr-2 font-serif">hours</div>
-                  <div className="lg:text-3xl font-semibold text-purple-500 mr-2">
-                    {minutes}
-                  </div>
-                  <div className="text-gray-200 mr-2 font-serif">min</div>
-                  <div className="lg:text-3xl font-semibold text-purple-500 ">
-                    {seconds}
-                  </div>
-                  <div className="text-gray-200 font-serif ml-2  ">sec</div>
                 </div>
-              )}
-            />
+              </Slider>
+            </div>
           </div>
         </div>
       </div>

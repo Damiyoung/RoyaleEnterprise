@@ -9,17 +9,15 @@ import {
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-gray-900 text-gray-400">
+      <div className="bg-black text-gray-400">
         <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
           <div className="text-center sm:text-left mb-4 sm:mb-0">
             <h2
               className={`gradient ${`text-2xl font-bold text-white uppercase`}`}
             >
-              Core ID
+              ROYALE ENTERPRISE
             </h2>
-            <p className="mt-3 text-base">
-              Collectible digital cats on the Ethereum blockchain
-            </p>
+            <p className="mt-3 text-base">Giving the best Clothing brand</p>
           </div>
           <div className="flex items-center">
             <a

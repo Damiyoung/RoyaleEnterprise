@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Favourites from "./Favourites";
-import MyDomain from "./MyDomain";
+import Favourites from "./OldStuck";
+import MyDomain from "./NewArrival";
 
 const ConnectWallet = () => {
   const [activeTab, setActiveTab] = useState("register");
@@ -10,12 +10,12 @@ const ConnectWallet = () => {
   };
 
   return (
-    <div className="p-4  bg-black">
+    <div className="p-4  bg-blue-200">
       <h1 className="gradient1 text-2xl text-center font-bold mb-2 text-white">
-        Connect Wallet
+        Latest Arrivals
       </h1>
-      <p className="text-sm font-semibold text-gray-600 mb-4 text-center">
-        Connect your wallet to purchase NFTs
+      <p className="text-sm font-semibold text-black font-mono mb-4 text-center">
+        Check for the latest Arrival
       </p>
       {/* <button className=" bg-[#FFD700] bg-center hover:bg-indigo-600
        text-white font-bold p-3 rounded-br-xl rounded-tl-xl animate-pulse mb-4"> */}
@@ -24,55 +24,33 @@ const ConnectWallet = () => {
       animate-pulse font-extrabold p-3 "
       >
         {" "}
-        Connect Wallet
+        Make Whatsapp order
       </p>
       {/* </button> */}
-      <details>
-        <summary className="text-sm font-semibold text-gray-600 mb-2">
-          Primary Name: not set
-        </summary>
-        <div className="mt-4">
-          <input
-            type="text"
-            placeholder="Search for Core or Domin"
-            className="w-full py-2 px-4 border-gray-400 rounded-md mb-2 border"
-          />
-          <div className="flex justify-center items-center mt-3">
-            <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-2 rounded-tr-lg mr-2">
-              Delete
-            </button>
-            <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-2 rounded-bl-md mr-2">
-              Cancel
-            </button>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-2 rounded-tr-lg">
-              Save
-            </button>
-          </div>
-        </div>
-      </details>
+
       <div className=" border-t-2 p-2 m-3 mt-5">
         <div className="flex items-center justify-end space-x-2 mt-4">
           <div
             onClick={() => handleTabClick("register")}
-            className={`text-white font-bold text-sm hover:text-gray-300 hover:border-white border-2 p-1 rounded-md border-gray-200 ${
-              activeTab === "register" ? "text-gray-300" : ""
+            className={`text-black font-bold text-sm  hover:border-white border-2 p-1 rounded-md border-gray-200 ${
+              activeTab === "register" ? "text-black" : ""
             } cursor-pointer`}
           >
-            My Domain
+            New Arrivals
           </div>
           <div
             onClick={() => handleTabClick("details")}
-            className={`text-white font-bold text-sm hover:border-white hover:text-gray-300 border-2 p-1 rounded-md border-gray-200 ${
-              activeTab === "details" ? "text-gray-300" : ""
+            className={`text-black font-bold text-sm hover:border-white border-2 p-1 rounded-md border-gray-200 ${
+              activeTab === "details" ? "text-black" : ""
             } cursor-pointer`}
           >
-            Favourite
+            Old stock
           </div>
         </div>
         <div className="sm:flex sm:items-center justify-center items-center py-4">
           <div
-            className="bg-white shadow-lg rounded-lg p-4 overflow-hidden animate-fade-in-up
-         w-full lg:w-3/4 lg:mr-4 mb-4 lg:mb-0 flex-shrink-0"
+            className=" rounded-lg  h-fit overflow-hidden animate-fade-in-up
+         w-full  "
           >
             {activeTab === "register" && <MyDomain />}
             {activeTab === "details" && <Favourites />}

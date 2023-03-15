@@ -1,33 +1,34 @@
 import { useState } from "react";
 import styles from "../globalStyle";
-import logo from "../assets/logo.png";
+
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-black shadow-md">
+    <nav className="bg-blue-200 shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <img src={logo} alt="coreNS" className="sm:w-[35%] w-[45%]" />
+            <p className="text-4xl">👗</p>
+            <p className=" font-extrabold font-mono"> ROYALE ENTERPRISE</p>
           </div>
           <div className="hidden lg:flex lg:items-center lg:justify-end lg:flex-1">
             <Link to="/" className={`${styles.lgNavbarlink}`}>
               Home
             </Link>
             <a href="#" className={`${styles.lgNavbarlink}`}>
-              Api Docs
+              Trouers
             </a>
             <a href="#" className={`${styles.lgNavbarlink}`}>
-              Twitter
+              New Arrivals
             </a>
             <a href="#" className={`${styles.lgNavbarlink}`}>
-              Telegram
+              Bags
             </a>
             <a href="#" className={`${styles.lgNavbarlink}`}>
-              Discord
+              Shoes
             </a>
           </div>
           <div></div>
@@ -86,16 +87,16 @@ const Navbar = () => {
           </Link>
           <Link to="/" className={`${styles.smNavbarlink}`}>
             {" "}
-            Api Docs
+            Trousers
           </Link>
           <a href="#" className={`${styles.smNavbarlink}`}>
-            Twitter
+            New Arriver
           </a>
           <a href="#" className={`${styles.smNavbarlink}`}>
-            Telegram
+            Bags
           </a>
           <a href="#" className={`${styles.smNavbarlink}`}>
-            Discord
+            Shoes
           </a>
         </div>
       )}

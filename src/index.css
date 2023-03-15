@@ -38,12 +38,12 @@
 .gradient1 {
   background: linear-gradient(
     to right,
-    #943670,
-    #6b4591,
-    #451e49,
-    #ce56e9,
-    #9e5579,
-    rgb(147 51 234)
+    #366a94,
+    #4a4591,
+    #1e4049,
+    #369eda,
+    #558f9e,
+    rgb(51, 234, 219)
   );
   -webkit-background-clip: text;
   background-clip: text;
